@@ -24,7 +24,7 @@ for /f  "delims=" %%i in (networklog.txt) do (
       set atmp=!atmp:~47,10!
       if "!atmp!"=="WLAN" (
         echo restarting wifi  
-        netsh wlan connect "Tencent ZC"  
+        netsh wlan connect "****"  
       )
   )
 
@@ -38,7 +38,7 @@ for /f  "delims=" %%i in (networklog.txt) do (
      if "!atmp!"=="9" (
        echo new work broken  >> network.log
        echo restarting wifi   >> network.log
-       netsh wlan connect "Tencent ZC"  >> network.log
+       netsh wlan connect "****"  >> network.log
        echo restarting China Telecom   >> network.log
        TASKKILL /f /t /IM "C+WClient.exe"  >nul 2>nuls
        echo "C:\Program Files (x86)\Chinatelecom C+W\C+WClient.exe" | cmd
